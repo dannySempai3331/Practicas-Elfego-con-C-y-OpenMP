@@ -6,8 +6,6 @@
 			"label": "C/C++: gcc.exe compilar archivo activo",
 			"command": "C:\\MinGW\\bin\\gcc.exe",
 			"args": [
-				"-fdiagnostics-color=always",
-				"-fopenmp",
 				"-g",
 				"${file}",
 				"-o",
@@ -19,7 +17,29 @@
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"detail": "compilador: C:\\MinGW\\bin\\gcc.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe compilar archivo activo",
+			"command": "C:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-fopenmp",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"${file}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "test",
 			"detail": "compilador: C:\\MinGW\\bin\\gcc.exe"
 		}
 	]
