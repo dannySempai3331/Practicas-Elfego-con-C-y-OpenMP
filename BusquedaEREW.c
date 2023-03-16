@@ -36,7 +36,7 @@ void broadcast(int A[], int x, int n){
         }
     }
 
-    //ya jala ni le muevas
+    //ya jala no le muevas
     printf("Difucion: \n");
     mostrarArreglo(A,n);
     printf("\n");

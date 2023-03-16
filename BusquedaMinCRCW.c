@@ -6,9 +6,8 @@ int main(){
 
     int L[]={5,1,100,20};
     int n = (int) sizeof(L)/sizeof(L[0]);
-    //https://610yilingliu.github.io/2020/07/01/DebugCwithOpenmpinVscode/
 
-    printf("Arreglo en donde se debe buscar su elemento minimo \n");
+    printf("\n Arreglo en donde se debe buscar su elemento minimo \n");
     mostrarArreglo(L,n);
     printf("\n");
     printf("Elemento minimo del arreglo: %i",minCRCW(L,n));
