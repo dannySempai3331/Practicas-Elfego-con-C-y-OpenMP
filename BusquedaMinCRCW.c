@@ -29,8 +29,8 @@ int minCRCW(int L[],int n){
 
 
     #pragma omp parallel for
-
     for(int i =0; i<n;i++){
+        #pragma omp parallel for
         for(int j=i+1; j<n;j++){
 
                 if(L[i]>L[j]){
@@ -51,7 +51,8 @@ int minCRCW(int L[],int n){
     printf("Comparacion \n");
     mostrarArreglo(win,n);
     printf("\n");
-
+    
+    #pragma omp parallel for
     for(int i=0;i<n;i++){
         if(win[i]==0){
             indexMin=i;

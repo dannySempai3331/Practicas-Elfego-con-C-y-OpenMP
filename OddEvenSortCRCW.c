@@ -20,26 +20,12 @@ int main()
 
 void mergeSort(int L[], int n)
 {
-    if (n >= 2)
-    {
-        int m = (int)n / 2;
-
-        int B[m];
-        for (int i = 0; i < m; i++)
+    if (n >= 2){
+        
+    #pragma omp critical 
         {
-            B[i] = L[2 * i];
-        }
-
-        int C[m];
-        for (int i = m; i < n; i++)
-        {
-            C[i - m] = L[2 * (i - m) + 1];
-        }
-
-#pragma omp critical 
-        {
-            mergeSort(B, m);
-            mergeSort(C, m);
+             mergeSort(L, n/2);
+            mergeSort(L+n/2, n-n/2);
         }
 
         oddEvenMerge(L, n);

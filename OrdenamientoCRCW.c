@@ -32,6 +32,7 @@ void sortCRCW(int L[], int n){
 
  #pragma omp parallel for
  for (int i = 0; i < n; i++) {
+    #pragma omp parallel for
     for (int j = i+1; j < n; j++) {
 
         if (L[i] > L[j]) {
