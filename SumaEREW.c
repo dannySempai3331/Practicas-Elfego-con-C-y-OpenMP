@@ -6,7 +6,7 @@
 int main(){
     //El arreglo debe que tener una longitud de 2^n (con n= 1,2,3,...) y comenzar con un 0.
 
-    int A[]={0,1,2,3,4,5,6,7,8};
+    int A[]={0,1,1,1,1,1,1,1,1};
     int n = (int) sizeof(A)/ sizeof(A[0]);
     printf("Elementos a sumar: \n");
     mostrarArreglo(A,n);

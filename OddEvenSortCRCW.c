@@ -5,7 +5,7 @@
 
 int main()
 {
-    int L[] = {16, 22, 35, 40, 53, 66, 70, 85, 15, 18, 23, 55, 60, 69, 72, 78};
+    int L[] = {16, 22, 35, 40, 53, 66, 70, 83, 15, 18, 23, 55, 60, 69, 72, 78};
     int n = (int) sizeof(L)/sizeof(L[0]);
     printf("Arreglo a ordenar: \n");
     mostrarArreglo(L,n);
@@ -14,18 +14,18 @@ int main()
     mergeSort(L, n);
     printf("Arreglo a ordenado: \n");
     mostrarArreglo(L,n);
-   
+
     return 0;
 }
 
 void mergeSort(int L[], int n)
 {
     if (n >= 2){
-        
-    #pragma omp critical 
+
+    #pragma omp critical
         {
              mergeSort(L, n/2);
-            mergeSort(L+n/2, n-n/2);
+             mergeSort(L+n/2, n-n/2);
         }
 
         oddEvenMerge(L, n);
@@ -68,7 +68,7 @@ void oddEvenMerge(int L[], int n)
 
         oddEvenSplit(L, odd, even, n);
 
-#pragma omp critical 
+#pragma omp critical
         {
             oddEvenMerge(odd, m);
             oddEvenMerge(even, m);

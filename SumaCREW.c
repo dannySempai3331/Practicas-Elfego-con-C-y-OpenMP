@@ -6,7 +6,7 @@
 
 int main(){
 
-    int A[]={0,5,2,10,1,8,12,7,3};
+    int A[]={0,1,1,1,1,1,1,1,1};
     int n =((int) sizeof(A)/ sizeof(A[0]))-1;
     int log = log2(n);
 

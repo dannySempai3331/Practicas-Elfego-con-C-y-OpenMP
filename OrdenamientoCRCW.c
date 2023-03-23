@@ -4,7 +4,7 @@
 
 int main(){
     
-    int L[]={95,10,6,15};
+    int L[]={95,10,6,15,1,8,10000};
     int n = (int) sizeof(L)/sizeof(L[0]);
     printf("Arreglo a ordenar: \n");
     mostrarArreglo(L,n);
