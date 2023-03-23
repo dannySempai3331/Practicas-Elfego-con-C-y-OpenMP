@@ -9,7 +9,7 @@ int main(){
 
     int A[]={2,-1,23,-4,2,5,-2,0,5,1,5,-5,8,5,3,-2};
     int n = (int) sizeof(A)/ sizeof(A[0]);
-    int x = 8;
+    int x = 3;
 
     printf("Elemento a buscar: %i \n",x);
     printf("Arreglo \n");

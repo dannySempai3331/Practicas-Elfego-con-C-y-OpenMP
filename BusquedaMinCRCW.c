@@ -4,7 +4,7 @@
 
 int main(){
 
-    int L[]={5,1,100,20};
+    int L[]={55,41,100,20};
     int n = (int) sizeof(L)/sizeof(L[0]);
 
     printf("\n Arreglo en donde se debe buscar su elemento minimo \n");

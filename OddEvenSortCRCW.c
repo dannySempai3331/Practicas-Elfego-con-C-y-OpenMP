@@ -5,7 +5,7 @@
 
 int main()
 {
-    int L[] = {16, 22, 35, 40, 53, 66, 70, 83, 15, 18, 23, 55, 60, 69, 72, 78};
+    int L[] = {16, 22, 35, 40, 53, 66, 70, 83, 5, 18, 23, 55, 60, 69, 72, 78};
     int n = (int) sizeof(L)/sizeof(L[0]);
     printf("Arreglo a ordenar: \n");
     mostrarArreglo(L,n);
